@@ -10,6 +10,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
 }
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
 /*============ Code Chung =============*/
 a {
   text-decoration: none;
@@ -17,13 +21,16 @@ a {
 .btn {
   display: inline-block;
   min-width: 118px;
-  padding: 11px 41px;
-  line-height: 2.8rem;
+  padding: 0 16px;
+  line-height: 50px;
   color: #fff;
   text-align: center;
   font-weight: 600;
-  border-radius: 24.5px;
+  border-radius: 999px; /* sua lai ban kinh bo cho bo deu hon*/
   background: #171100;
+}
+.btn:hover {
+  opacity: 0.9;
 }
 .main-content {
   width: 1170px;
@@ -38,6 +45,7 @@ a {
 .header.fixed {
   position: sticky;
   top: -28px;
+  z-index: 1; /* noi len tren */
 }
 .header .body {
   display: flex;
@@ -57,7 +65,7 @@ a {
 
 .nav a {
   position: relative;
-  display: inline-block; /* Giu vi tri khoi ::after khong bi lech */ 
+  display: inline-block; /* Giu vi tri khoi ::after khong bi lech */
   color: #5f5b53;
   padding: 8px 21px;
 }
@@ -86,4 +94,162 @@ a {
 
 .header .action {
   margin-left: 49px;
+}
+
+/*============ Code Phan Hero =============*/
+.hero {
+  padding: 56px 0 65px;
+  /* background: blue; */
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+
+/* ========== phan hero-left ============*/
+.hero .media-block {
+  width: 48%;
+  position: relative;
+  display: flex;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.hero .hero-summary {
+  width: 270px;
+  padding: 24px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff9e8;
+}
+.hero-summary .icon2 {
+  background: #fcefff;
+}
+.hero-summary .icon3 {
+  background: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+/* ========== phan hero-right ============*/
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px; /* 214 - 150 = 64 */
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-top: 22px; /* figma change 28px */
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background: var(--primary-color);
+}
+
+.hero .watch-video {
+  border: none; /* bo vien border cho button */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  cursor: pointer; /* them con tro ban tay khi re chuot vao */
+}
+
+.hero .watch-video .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats {
+  margin-top: 8px;
+}
+
+.hero .stats strong {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+  margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }

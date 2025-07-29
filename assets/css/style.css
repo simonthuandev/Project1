@@ -46,6 +46,17 @@ a {
   max-width: calc(100% - 48px);
   margin: 0 auto;
 }
+.line-clamp { /* tao dau 3 cham khi vuot qua 1 dong */
+  display: -webkit-box;
+  line-clamp: var(--line-clamp);
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all; /* ngan truong hop nhap tu qua dai lam vo thiet ke */
+}
+.line-clamp.line-2 { /* tao dau 3 cham khi vuot qua 2 dong */
+  --line-clamp: 2;
+}
 /*============ Code Phan Header =============*/
 .header {
   background: #fffcf4;
@@ -311,6 +322,7 @@ a {
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
+  flex: 1; /* cac khoi trong flexbox co cung width */
 }
 .popular .course-item:hover {
   border: 1px solid transparent;

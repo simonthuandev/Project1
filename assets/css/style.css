@@ -441,7 +441,7 @@ a {
   font-style: italic;
   line-height: 1.54;
 }
-/*============ Code Phan Features =============*/
+/*============ Code Phan Features 1 =============*/
 .features {
   margin-top: 135px;
   padding: 65px 0;
@@ -460,7 +460,7 @@ a {
   object-fit: cover;
   border-radius: 16px;
 }
-.features .images img:nth-of-type(1) {
+.features .lower {
   margin-top: 34px;
 }
 .features .content {
@@ -476,4 +476,19 @@ a {
   min-width: 137px;
   margin-top: 32px;
   background: var(--primary-color);
+}
+/*============ Code Phan Features 2 =============*/
+.features-2nd {
+  margin-top: 70px; /* 200 - 2x65 */
+}
+.features-2nd .body {
+  flex-direction: row-reverse;
+}
+.features-2nd .content {
+  width: 49%;
+}
+.features-2nd .images img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
 }

@@ -441,3 +441,39 @@ a {
   font-style: italic;
   line-height: 1.54;
 }
+/*============ Code Phan Features =============*/
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+.features .images img {
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.features .images img:nth-of-type(1) {
+  margin-top: 34px;
+}
+.features .content {
+  width: 41%;
+  align-self: center;
+}
+.features .content .desc {
+  color: #5f5b53;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+.features .cta-btn {
+  min-width: 137px;
+  margin-top: 32px;
+  background: var(--primary-color);
+}

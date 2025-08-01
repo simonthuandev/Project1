@@ -516,7 +516,7 @@ a {
   overflow: hidden;
 }
 .blogs .item {
-  flex-shrink: 0; /* khong co lai, lam mat noi dung */ 
+  flex-shrink: 0; /* khong co lai, lam mat noi dung */
   width: calc(33.33% - 20px); /* tru di phan gap de khong mat noi dung */
   border-radius: 16px;
   background: #fff;
@@ -592,4 +592,67 @@ a {
 .blogs .dot.active {
   background: var(--primary-color);
   cursor: default;
+}
+/*============ Code Phan Footer =============*/
+footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+.footer .row .column {
+  width: 21.6%; /* (100% - 35%) : 3 */
+}
+.footer .row .column:first-child {
+  width: 35%; /* 267 + 135 */
+}
+.footer .desc {
+  max-width: 267px;
+  margin-top: 18px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+.footer .title {
+  display: inline-block;
+  padding-bottom: 14px;
+  padding-right: 48px;
+  border-bottom: 1px solid #59554b;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.footer .list {
+  margin-top: 28px;
+}
+.footer .list a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+.footer .copyright {
+  padding: 28px 0;
+  text-align: center;
+  color: #807d74;
+  font-size: 1.4rem;
+  line-height: 1.86;
 }

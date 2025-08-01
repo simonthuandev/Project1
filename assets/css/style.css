@@ -1,0 +1,658 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+/*============ Code Chung =============*/
+a {
+  text-decoration: none;
+}
+.heading-lv2 {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 999px; /* sua lai ban kinh bo cho bo deu hon*/
+  background: #171100;
+}
+.btn:hover {
+  cursor: pointer; /* sua lai */
+  opacity: 0.9;
+}
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+.line-clamp {
+  /* tao dau 3 cham khi vuot qua 1 dong */
+  display: -webkit-box;
+  line-clamp: var(--line-clamp);
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all; /* ngan truong hop nhap tu qua dai lam vo thiet ke */
+}
+.line-clamp.line-2 {
+  /* tao dau 3 cham khi vuot qua 2 dong */
+  --line-clamp: 2;
+}
+/*============ Code Phan Header =============*/
+.header {
+  background: #fffcf4;
+  overflow: auto; /* Tu dong xuat hien thanh cuon */
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 1; /* noi len tren */
+}
+.header .body {
+  display: flex;
+  /* flex-wrap: wrap; */ /* Cho phep xuong dong khi khong the chua */
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.nav a {
+  position: relative;
+  display: inline-block; /* Giu vi tri khoi ::after khong bi lech */
+  color: #5f5b53;
+  padding: 8px 21px;
+}
+
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+  left: 21px;
+  bottom: 2px;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+
+/*============ Code Phan Hero =============*/
+.hero {
+  padding: 56px 0 65px;
+  /* background: blue; */
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+
+/* ========== phan hero-left ============*/
+.hero .media-block {
+  width: 48%;
+  position: relative;
+  display: flex;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.hero .hero-summary {
+  width: 270px;
+  padding: 24px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff9e8;
+}
+.hero-summary .icon2 {
+  background: #fcefff;
+}
+.hero-summary .icon3 {
+  background: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+/* ========== phan hero-right ============*/
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px; /* 214 - 150 = 64 */
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-top: 22px; /* figma change 28px */
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background: var(--primary-color);
+}
+
+.hero .watch-video {
+  border: none; /* bo vien border cho button */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  cursor: pointer; /* them con tro ban tay khi re chuot vao */
+}
+
+.hero .watch-video .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats {
+  margin-top: 8px;
+}
+
+.hero .stats strong {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+  margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
+}
+
+/*============ Code Phan Popular =============*/
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+/* ----------- Part1. Popular-top ----------- */
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+.popular-top .controls {
+  display: flex;
+  gap: 18px;
+}
+.popular-top .control-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-top .control-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+/* ----------- Part1. Popular-bottom ----------- */
+.popular .course-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+.popular .course-item {
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+  flex: 1; /* cac khoi trong flexbox co cung width */
+}
+.popular .course-item:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+.popular .course-item .thumb {
+  width: 100%;
+  height: 278px;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+}
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular .course-item .title a {
+  color: #171100;
+  font-size: 1.88rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+.popular .rating .value {
+  margin-left: 6px;
+  color: #fea31b;
+  line-height: 1.75;
+}
+.popular .course-item .desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.popular .course-item .foot {
+  margin-top: 12px;
+}
+.popular .foot .price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+.popular .course-item .btn-book {
+  border: none;
+}
+.popular .course-item .btn-book:hover {
+  background: var(--primary-color);
+  border-radius: 25px;
+}
+
+/*============ Code Phan Feedback =============*/
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+.feedback-item {
+  width: 100%; /* de khong bi mat chu khi dung flex-srhink*/
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0; /* khong co lai */
+}
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.feedback-item .dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+}
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback-item .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+.feedback-item .content {
+  width: 66%; /* 770 : 1170 px */
+}
+.feedback-item blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
+}
+/*============ Code Phan Features 1 =============*/
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+.features .images img {
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.features .lower {
+  margin-top: 34px;
+}
+.features .content {
+  width: 41%;
+  align-self: center;
+}
+.features .content .desc {
+  color: #5f5b53;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+.features .cta-btn {
+  min-width: 137px;
+  margin-top: 32px;
+  background: var(--primary-color);
+}
+/*============ Code Phan Features 2 =============*/
+.features-2nd {
+  margin-top: 70px; /* 200 - 2x65 */
+}
+.features-2nd .body {
+  flex-direction: row-reverse;
+}
+.features-2nd .content {
+  width: 49%;
+}
+.features-2nd .images img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+}
+
+/*============ Code Phan Blogs =============*/
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+.blogs .blog-top {
+  text-align: center;
+}
+.blogs .blog-top .desc {
+  margin: 16px auto 0;
+  width: 448px;
+  color: #696262;
+  line-height: 1.75;
+  align-content: center;
+}
+.blogs .blog-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+  overflow: hidden;
+}
+.blogs .item {
+  flex-shrink: 0; /* khong co lai, lam mat noi dung */
+  width: calc(33.33% - 20px); /* tru di phan gap de khong mat noi dung */
+  border-radius: 16px;
+  background: #fff;
+}
+.blogs .item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+.blogs .item .thumb {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+.blogs .date {
+  padding-bottom: 12px;
+  display: inline-flex; /* box chua chi vua noi dung */
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  position: relative;
+}
+.blogs .date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  margin-right: 4px;
+  align-self: center;
+}
+.blogs .date::after {
+  content: "";
+  display: inline-block;
+  /* width: 160px; */
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -27px; /* thay the cho 160px (133+27) */
+}
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.blogs .item .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+.blogs .item .btn:hover {
+  background: var(--primary-color);
+}
+.blogs .dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+.blogs .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+/*============ Code Phan Footer =============*/
+footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+.footer .row .column {
+  width: 21.6%; /* (100% - 35%) : 3 */
+}
+.footer .row .column:first-child {
+  width: 35%; /* 267 + 135 */
+}
+.footer .desc {
+  max-width: 267px;
+  margin-top: 18px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+.footer .title {
+  display: inline-block;
+  padding-bottom: 14px;
+  padding-right: 48px;
+  border-bottom: 1px solid #59554b;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.footer .list {
+  margin-top: 28px;
+}
+.footer .list a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+.footer .copyright {
+  padding: 28px 0;
+  text-align: center;
+  color: #807d74;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
